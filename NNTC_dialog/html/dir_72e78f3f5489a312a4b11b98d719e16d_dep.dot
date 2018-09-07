@@ -1,0 +1,9 @@
+digraph "NNTC/GeneratedFiles/Debug" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_767648d046a3bcdf87dacc97a172d1a0 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="GeneratedFiles" fontname="Helvetica", fontsize="10", URL="dir_767648d046a3bcdf87dacc97a172d1a0.html"]
+  dir_72e78f3f5489a312a4b11b98d719e16d [shape=box, label="Debug", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_72e78f3f5489a312a4b11b98d719e16d.html"];
+  }
+}

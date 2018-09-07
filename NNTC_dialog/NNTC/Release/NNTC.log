@@ -1,0 +1,41 @@
+﻿  EEGWave.cpp
+  Microsoft (R) Incremental Linker Version 14.00.24215.1
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  "/OUT:C:\Users\neuronflex2\Documents\Visual Studio 2015\Projects\NNTC_dialog\Win32\Release\\NNTC.exe" /LIBPATH:C:\Qt\Qt5.11.1\5.11.1\msvc2015\lib /LIBPATH:..\User\lib qtmain.lib Qt5Core.lib Qt5Gui.lib Qt5Sql.lib Qt5OpenGL.lib opengl32.lib glu32.lib Qt5PrintSupport.lib Qt5SerialPort.lib Qt5Widgets.lib Qt5Network.lib IIRProcesser.lib FIRWINFuction.lib FilterProcessing.lib "libfftw3-3.lib" "libfftw3f-3.lib" "libfftw3l-3.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST "/MANIFESTUAC:level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG "/PDB:C:\Users\neuronflex2\Documents\Visual Studio 2015\Projects\NNTC_dialog\Win32\Release\NNTC.pdb" /SUBSYSTEM:WINDOWS /LTCG:incremental /TLBID:1 /DYNAMICBASE /NXCOMPAT "/IMPLIB:C:\Users\neuronflex2\Documents\Visual Studio 2015\Projects\NNTC_dialog\Win32\Release\NNTC.lib" /MACHINE:X86 /SAFESEH Release\DataControll.obj 
+  Release\EEGWave.obj 
+  Release\moc_DataControll.obj 
+  Release\moc_GLWidget.obj 
+  Release\moc_Registration.obj 
+  Release\moc_UsbThread.obj 
+  Release\GLWidget.obj 
+  Release\moc_nntc.obj 
+  Release\qrc_nntc.obj 
+  Release\main.obj 
+  Release\nntc.obj 
+  Release\Registration.obj 
+  Release\TableUserDelegate.obj 
+  Release\UsbThread.obj 
+FIRWINFuction.lib(FIRWINFunction.obj) : warning LNK4075: '/EDITANDCONTINUE'이(가) '/OPT:LBR' 사양으로 인해 무시됩니다.
+     C:\Users\neuronflex2\Documents\Visual Studio 2015\Projects\NNTC_dialog\Win32\Release\NNTC.lib 라이브러리 및 C:\Users\neuronflex2\Documents\Visual Studio 2015\Projects\NNTC_dialog\Win32\Release\NNTC.exp 개체를 생성하고 있습니다.
+LINK : warning LNK4098: 'MSVCRTD' defaultlib가 다른 라이브러리와 충돌합니다. /NODEFAULTLIB:library를 사용하십시오.
+  코드를 생성하고 있습니다.
+  0 of 617 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  코드를 생성했습니다.
+IIRProcesser.lib(Biquad.obj) : warning LNK4099: 'IIRProcesser.pdb' PDB를 'IIRProcesser.lib(Biquad.obj)' 또는 'C:\Users\neuronflex2\Documents\Visual Studio 2015\Projects\NNTC_dialog\Win32\Release\IIRProcesser.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+IIRProcesser.lib(Cascade.obj) : warning LNK4099: 'IIRProcesser.pdb' PDB를 'IIRProcesser.lib(Cascade.obj)' 또는 'C:\Users\neuronflex2\Documents\Visual Studio 2015\Projects\NNTC_dialog\Win32\Release\IIRProcesser.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+IIRProcesser.lib(Bessel.obj) : warning LNK4099: 'IIRProcesser.pdb' PDB를 'IIRProcesser.lib(Bessel.obj)' 또는 'C:\Users\neuronflex2\Documents\Visual Studio 2015\Projects\NNTC_dialog\Win32\Release\IIRProcesser.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+IIRProcesser.lib(Butterworth.obj) : warning LNK4099: 'IIRProcesser.pdb' PDB를 'IIRProcesser.lib(Butterworth.obj)' 또는 'C:\Users\neuronflex2\Documents\Visual Studio 2015\Projects\NNTC_dialog\Win32\Release\IIRProcesser.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+IIRProcesser.lib(ChebyshevI.obj) : warning LNK4099: 'IIRProcesser.pdb' PDB를 'IIRProcesser.lib(ChebyshevI.obj)' 또는 'C:\Users\neuronflex2\Documents\Visual Studio 2015\Projects\NNTC_dialog\Win32\Release\IIRProcesser.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+IIRProcesser.lib(ChebyshevII.obj) : warning LNK4099: 'IIRProcesser.pdb' PDB를 'IIRProcesser.lib(ChebyshevII.obj)' 또는 'C:\Users\neuronflex2\Documents\Visual Studio 2015\Projects\NNTC_dialog\Win32\Release\IIRProcesser.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+IIRProcesser.lib(Elliptic.obj) : warning LNK4099: 'IIRProcesser.pdb' PDB를 'IIRProcesser.lib(Elliptic.obj)' 또는 'C:\Users\neuronflex2\Documents\Visual Studio 2015\Projects\NNTC_dialog\Win32\Release\IIRProcesser.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+IIRProcesser.lib(Legendre.obj) : warning LNK4099: 'IIRProcesser.pdb' PDB를 'IIRProcesser.lib(Legendre.obj)' 또는 'C:\Users\neuronflex2\Documents\Visual Studio 2015\Projects\NNTC_dialog\Win32\Release\IIRProcesser.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+IIRProcesser.lib(IIRProc.obj) : warning LNK4099: 'IIRProcesser.pdb' PDB를 'IIRProcesser.lib(IIRProc.obj)' 또는 'C:\Users\neuronflex2\Documents\Visual Studio 2015\Projects\NNTC_dialog\Win32\Release\IIRProcesser.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+IIRProcesser.lib(PoleFilter.obj) : warning LNK4099: 'IIRProcesser.pdb' PDB를 'IIRProcesser.lib(PoleFilter.obj)' 또는 'C:\Users\neuronflex2\Documents\Visual Studio 2015\Projects\NNTC_dialog\Win32\Release\IIRProcesser.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+IIRProcesser.lib(RootFinder.obj) : warning LNK4099: 'IIRProcesser.pdb' PDB를 'IIRProcesser.lib(RootFinder.obj)' 또는 'C:\Users\neuronflex2\Documents\Visual Studio 2015\Projects\NNTC_dialog\Win32\Release\IIRProcesser.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+qtmain.lib(qtmain_win.obj) : warning LNK4099: 'qtmain.pdb' PDB를 'qtmain.lib(qtmain_win.obj)' 또는 'C:\Users\neuronflex2\Documents\Visual Studio 2015\Projects\NNTC_dialog\Win32\Release\qtmain.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+FIRWINFuction.lib(FIRWINFunction.obj) : warning LNK4099: 'vc90.pdb' PDB를 'FIRWINFuction.lib(FIRWINFunction.obj)' 또는 'C:\Users\neuronflex2\Documents\Visual Studio 2015\Projects\NNTC_dialog\Win32\Release\vc90.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+  NNTC.vcxproj -> C:\Users\neuronflex2\Documents\Visual Studio 2015\Projects\NNTC_dialog\Win32\Release\NNTC.exe
+  NNTC.vcxproj -> C:\Users\neuronflex2\Documents\Visual Studio 2015\Projects\NNTC_dialog\Win32\Release\NNTC.pdb (Full PDB)

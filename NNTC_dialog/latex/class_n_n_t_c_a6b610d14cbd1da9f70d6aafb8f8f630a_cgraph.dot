@@ -1,0 +1,17 @@
+digraph "NNTC::NNTC"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="NNTC::NNTC",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 [label="Ui_NNTCClass::setupUi",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_ui___n_n_t_c_class.html#af15085afc5bdbefb529321782b509792"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Ui_NNTCClass::retranslateUi",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_ui___n_n_t_c_class.html#ad2695a3333b66339fde691ec8384d154"];
+  Node0 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="NNTC::serial_connect",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_n_n_t_c.html#ae9613ae3c1668e30610e0104e8e53d40"];
+  Node0 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="NNTC::serial_rescan",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_n_n_t_c.html#a5c1cdbe97b81d19b31ff07e9ca413be2"];
+  Node0 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="NNTC::serial_received",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_n_n_t_c.html#a2064774e2931ebb77e62bbd5115c0589"];
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>NNTC: NNTC/nntc.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">NNTC
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('nntc_8h_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">nntc.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="nntc_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef NNTC_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define NNTC_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QtWidgets/QDialog&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ui__nntc_8h.html">ui_nntc.h</a>&quot;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;qdebug.h&gt;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_n_n_t_c.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_n_n_t_c.html">NNTC</a> : <span class="keyword">public</span> QDialog</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    Q_OBJECT</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_n_n_t_c.html#a6b610d14cbd1da9f70d6aafb8f8f630a">NNTC</a>(QWidget *parent = 0);</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_n_n_t_c.html#a36e06f71df0bfcbeb932f34c5986801a">~NNTC</a>();</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span> slots:</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_n_n_t_c.html#ae9613ae3c1668e30610e0104e8e53d40">serial_connect</a>();</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_n_n_t_c.html#a5c1cdbe97b81d19b31ff07e9ca413be2">serial_rescan</a>();</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_n_n_t_c.html#ac33ec4d5e113accf260bc4b4d9f77338">widget_changed</a>();</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_n_n_t_c.html#a7734a6d097beaf07c27e46af0987d59a">send_test</a>();</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_n_n_t_c.html#a2064774e2931ebb77e62bbd5115c0589">serial_received</a>();</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_n_n_t_c.html#aafbe297818dd00b2c0f791ebb06292a4">   26</a></span>&#160;    <a class="code" href="class_ui_1_1_n_n_t_c_class.html">Ui::NNTCClass</a> <a class="code" href="class_n_n_t_c.html#aafbe297818dd00b2c0f791ebb06292a4">ui</a>;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif // NNTC_H</span></div><div class="ttc" id="class_n_n_t_c_html_a7734a6d097beaf07c27e46af0987d59a"><div class="ttname"><a href="class_n_n_t_c.html#a7734a6d097beaf07c27e46af0987d59a">NNTC::send_test</a></div><div class="ttdeci">void send_test()</div><div class="ttdef"><b>Definition:</b> <a href="nntc_8cpp_source.html#l00066">nntc.cpp:66</a></div></div>
+<div class="ttc" id="ui__nntc_8h_html"><div class="ttname"><a href="ui__nntc_8h.html">ui_nntc.h</a></div></div>
+<div class="ttc" id="class_n_n_t_c_html_ac33ec4d5e113accf260bc4b4d9f77338"><div class="ttname"><a href="class_n_n_t_c.html#ac33ec4d5e113accf260bc4b4d9f77338">NNTC::widget_changed</a></div><div class="ttdeci">void widget_changed()</div><div class="ttdef"><b>Definition:</b> <a href="nntc_8cpp_source.html#l00060">nntc.cpp:60</a></div></div>
+<div class="ttc" id="class_n_n_t_c_html_ae9613ae3c1668e30610e0104e8e53d40"><div class="ttname"><a href="class_n_n_t_c.html#ae9613ae3c1668e30610e0104e8e53d40">NNTC::serial_connect</a></div><div class="ttdeci">void serial_connect()</div><div class="ttdef"><b>Definition:</b> <a href="nntc_8cpp_source.html#l00023">nntc.cpp:23</a></div></div>
+<div class="ttc" id="class_n_n_t_c_html"><div class="ttname"><a href="class_n_n_t_c.html">NNTC</a></div><div class="ttdef"><b>Definition:</b> <a href="nntc_8h_source.html#l00009">nntc.h:9</a></div></div>
+<div class="ttc" id="class_n_n_t_c_html_a5c1cdbe97b81d19b31ff07e9ca413be2"><div class="ttname"><a href="class_n_n_t_c.html#a5c1cdbe97b81d19b31ff07e9ca413be2">NNTC::serial_rescan</a></div><div class="ttdeci">void serial_rescan()</div><div class="ttdef"><b>Definition:</b> <a href="nntc_8cpp_source.html#l00055">nntc.cpp:55</a></div></div>
+<div class="ttc" id="class_n_n_t_c_html_aafbe297818dd00b2c0f791ebb06292a4"><div class="ttname"><a href="class_n_n_t_c.html#aafbe297818dd00b2c0f791ebb06292a4">NNTC::ui</a></div><div class="ttdeci">Ui::NNTCClass ui</div><div class="ttdef"><b>Definition:</b> <a href="nntc_8h_source.html#l00026">nntc.h:26</a></div></div>
+<div class="ttc" id="class_n_n_t_c_html_a2064774e2931ebb77e62bbd5115c0589"><div class="ttname"><a href="class_n_n_t_c.html#a2064774e2931ebb77e62bbd5115c0589">NNTC::serial_received</a></div><div class="ttdeci">void serial_received()</div><div class="ttdef"><b>Definition:</b> <a href="nntc_8cpp_source.html#l00071">nntc.cpp:71</a></div></div>
+<div class="ttc" id="class_n_n_t_c_html_a36e06f71df0bfcbeb932f34c5986801a"><div class="ttname"><a href="class_n_n_t_c.html#a36e06f71df0bfcbeb932f34c5986801a">NNTC::~NNTC</a></div><div class="ttdeci">~NNTC()</div><div class="ttdef"><b>Definition:</b> <a href="nntc_8cpp_source.html#l00018">nntc.cpp:18</a></div></div>
+<div class="ttc" id="class_ui_1_1_n_n_t_c_class_html"><div class="ttname"><a href="class_ui_1_1_n_n_t_c_class.html">Ui::NNTCClass</a></div><div class="ttdef"><b>Definition:</b> <a href="ui__nntc_8h_source.html#l00096">ui_nntc.h:96</a></div></div>
+<div class="ttc" id="class_n_n_t_c_html_a6b610d14cbd1da9f70d6aafb8f8f630a"><div class="ttname"><a href="class_n_n_t_c.html#a6b610d14cbd1da9f70d6aafb8f8f630a">NNTC::NNTC</a></div><div class="ttdeci">NNTC(QWidget *parent=0)</div><div class="ttdef"><b>Definition:</b> <a href="nntc_8cpp_source.html#l00007">nntc.cpp:7</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_2f7f6cb4e3f24760078000e93e7e2ff8.html">NNTC</a></li><li class="navelem"><a class="el" href="nntc_8h.html">nntc.h</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

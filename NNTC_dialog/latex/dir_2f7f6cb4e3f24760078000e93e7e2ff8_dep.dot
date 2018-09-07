@@ -1,0 +1,11 @@
+digraph "NNTC" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_2f7f6cb4e3f24760078000e93e7e2ff8 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_2f7f6cb4e3f24760078000e93e7e2ff8.html"];
+    dir_2f7f6cb4e3f24760078000e93e7e2ff8 [shape=plaintext label="NNTC"];
+    dir_767648d046a3bcdf87dacc97a172d1a0 [shape=box label="GeneratedFiles" color="red" fillcolor="white" style="filled" URL="dir_767648d046a3bcdf87dacc97a172d1a0.html"];
+  }
+  dir_2f7f6cb4e3f24760078000e93e7e2ff8->dir_767648d046a3bcdf87dacc97a172d1a0 [headlabel="1", labeldistance=1.5 headhref="dir_000000_000001.html"];
+}
