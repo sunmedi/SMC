@@ -3,8 +3,8 @@
 #include <qdebug.h>
 #include <vector>
 #include <qtimer.h>
-
-#include "EEGWave.h"
+#include "UsbThread.h"
+//#include "EEGWave.h"
 
 #define EXCELLENT_RAW 22
 
@@ -83,7 +83,7 @@ private:
 	/// 
 	int width, height;
 	/// 
-	EEGWave WaveArray[4];
+	UsbThread usbSerialPort;
 	///
 	bool RawGreen[2048];
 	///

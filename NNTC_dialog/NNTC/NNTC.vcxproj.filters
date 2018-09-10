@@ -65,9 +65,6 @@
     <ClCompile Include="GeneratedFiles\Release\moc_UsbThread.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="EEGWave.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_DataControll.cpp">
       <Filter>Generated Files\Debug</Filter>
     </ClCompile>
@@ -119,9 +116,6 @@
   <ItemGroup>
     <ClInclude Include="GeneratedFiles\ui_nntc.h">
       <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="EEGWave.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GeneratedFiles\ui_Registration.h">
       <Filter>Generated Files</Filter>

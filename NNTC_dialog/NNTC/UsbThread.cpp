@@ -6,10 +6,11 @@
 UsbThread::UsbThread(QObject *parent)
 	: QThread(parent)
 {
-	m_stop = false;
-	m_pause = false;
+	isStop = false;
+	isPause = false;
 	serial = new QSerialPort(this);
-
+	//connect(serial, SIGNAL(readyRead()), this, SLOT(update()));
+	currentDisplayIndex = 0;
 }
 
 
@@ -50,13 +51,30 @@ bool UsbThread::InitThread()
 void UsbThread::run()
 {
 	while (!m_quit) {
-		if (m_stop)	break;
+		if (isStop)	break;
 		m_mutex.lock();
-		if (m_pause) m_pauseCondition.wait(&m_mutex, 100);
+		if (isPause) m_pauseCondition.wait(&m_mutex, 100);
+		/// 실행할 내용
+		if (currentDisplayIndex == 2048)
+		{
+			for (int i = 1536, k = 0; i < 2048; k++, i++)
+			{
+				Buf_2sec[k] = dataChannel1Array[i];
+			}
+			for (int i = 0; i< 2048; i++)
+			{
+				isOverFlow[i] = false;//data "amp" >thresh value ? true,false;
+				dataChannel1Array[i] = 0;
+				dataChannel2Array[i] = 0;
+			}
+			currentDisplayIndex = 0;
+		}
 
-		if (channelNumber == false)ReadFromNeuronFlex(&buffer1);
-		else if (channelNumber == true)ReadFromNeuronFlex2(&buffer1, &buffer2);
-		
+		int csi = currentDisplayIndex + BUF_SIZE;//스레드 밖에도 indx공유하고있기때문.머저 ...다음...
+
+		if (channelNumber == false)ReadFromNeuronFlex(buffer1, BUF_SIZE, csi);
+		else if (channelNumber == true)ReadFromNeuronFlex2(buffer1, buffer2, BUF_SIZE, csi);
+		currentDisplayIndex += BUF_SIZE;
 		m_mutex.unlock();
 	}
 }
@@ -121,21 +139,29 @@ voltage 값은 Raw data * 512/1023 - 256이다.
 *        @throws ValidException
 *
 */
-bool UsbThread::ReadFromNeuronFlex(double *buffer)
+bool UsbThread::ReadFromNeuronFlex(double *buffer,int packageSize, int endIndex)
 {
-	if (serial->waitForReadyRead(4))
+	
+	for (int i = endIndex - packageSize; i < endIndex; i++)
 	{
-		datas = serial->read(17);
-		//qDebug() << (unsigned char)datas[0] << "  " << (unsigned char)datas[1] << "  " << (unsigned char)datas[2] << "  " << (unsigned char)datas[3] << "  " << (unsigned char)datas[4] << "  " << (unsigned char)datas[5] << "  " << (unsigned char)datas[6] << "  " << (unsigned char)datas[7] << "  " << (unsigned char)datas[8] << "  " << (unsigned char)datas[9];
-	}
-	if (datas.size() != 17) return false;
-	if ((unsigned char)datas[0] == 165 && (unsigned char)datas[1] == 90)
-	{
-		//recvBuf_[i] = recvBuf[3];//count
-		double _ch1 = datas[4] << 8 | datas[5];//AD transf
-		*buffer = _ch1*512.0 / 1023.0 - 256.0;//EEG uV
-		qDebug() << "usbThread : " << *buffer;
+		
+		if (serial->waitForReadyRead(4))
+		{
+			datas = serial->read(17);
+		}
+		qDebug() << serial->bytesAvailable();
+		serial->readAll();
+		qDebug() << serial->bytesAvailable();
+		qDebug() << (unsigned char)datas[0] << "  " << (unsigned char)datas[1] << "  " << (unsigned char)datas[2] << "  " << (unsigned char)datas[3] << "  " << (unsigned char)datas[4] << "  " << (unsigned char)datas[5] << "  " << (unsigned char)datas[6] << "  " << (unsigned char)datas[7] << "  " << (unsigned char)datas[8] << "  " << (unsigned char)datas[9];
 
+		if (datas.size() != 17) return false;
+		if ((unsigned char)datas[0] == 165 && (unsigned char)datas[1] == 90)
+		{
+			//recvBuf_[i] = recvBuf[3];//count
+			double _ch1 = datas[4] << 8 | datas[5];//AD transf
+			buffer[i] = _ch1*512.0 / 1023.0 - 256.0;//EEG uV
+			qDebug() << "Voltage : " << buffer[i] << " uV";
+		}
 	}
 	return true;
 }
@@ -153,21 +179,30 @@ voltage 값은 Raw data * 512/1023 - 256이다.
 *        @throws ValidException
 *
 */
-bool UsbThread::ReadFromNeuronFlex2(double *buffer1, double *buffer2)
+bool UsbThread::ReadFromNeuronFlex2(double *buffer1, double *buffer2, int packageSize, int endIndex)
 {
 	if (serial->waitForReadyRead(10))
 	{
 		datas = serial->read(17);
 		//qDebug() << (unsigned char)datas[0] << "  " << (unsigned char)datas[1] << "  " << (unsigned char)datas[2] << "  " << (unsigned char)datas[3] << "  " << (unsigned char)datas[4] << "  " << (unsigned char)datas[5] << "  " << (unsigned char)datas[6] << "  " << (unsigned char)datas[7] << "  " << (unsigned char)datas[8] << "  " << (unsigned char)datas[9];
 	}
-	if (datas.size() != 17) return false;
-	if ((unsigned char)datas[0] == 165 && (unsigned char)datas[1] == 90)
+	for (int i = endIndex - packageSize; i < endIndex; i++)
 	{
-		double _ch1 = datas[4] * 256 + datas[5];//AD transf
-		double _ch2 = datas[6] * 256 + datas[7];
-		*buffer1 = (double)_ch1*512.0 / 1023.0 - 256.0;//EEG uV
-		*buffer2 = (double)_ch2*512.0 / 1023.0 - 256.0;//EEG uV
-	}
 
+		if (datas.size() != 17) return false;
+		if ((unsigned char)datas[0] == 165 && (unsigned char)datas[1] == 90)
+		{
+			double _ch1 = datas[4] * 256 + datas[5];//AD transf
+			double _ch2 = datas[6] * 256 + datas[7];
+			buffer1[i] = (double)_ch1*512.0 / 1023.0 - 256.0;//EEG uV
+			*buffer2 = (double)_ch2*512.0 / 1023.0 - 256.0;//EEG uV
+		}
+	}
 	return true;
+}
+
+void UsbThread::update()
+{
+	if (channelNumber == false)ReadFromNeuronFlex(buffer1, currentDisplayIndex, BUF_SIZE);
+	else if (channelNumber == true)ReadFromNeuronFlex2(buffer1, buffer2, currentDisplayIndex, BUF_SIZE);
 }

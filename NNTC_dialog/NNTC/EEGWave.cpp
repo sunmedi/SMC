@@ -931,7 +931,6 @@ void EEGWave::UpdateWave(double rawwave[],bool isRecoding,double FFT_AS[])
 	if(Current_sample_indx != 0&&Current_sample_indx<=2048)
 	{
 		//Recoded_Data_Change_flag = true;
-
 		//Convolution(FIR,FIR_TAP,rawwave->Y_Array_Display,FirDataSet.Window_width,Y_Array_Display);//2048-32 = window width->2016->1984
 #pragma region FILTER_PROCESSING3
 		//double array_buf_in[512];
@@ -1208,7 +1207,7 @@ void EEGWave::UpdateWave(double rawwave[],bool isRecoding,double FFT_AS[])
 		}*/ 
 		double buf2560[2560];
 		for (int i = 0; i < 2560; i++)
-			buf2560[i] = rawwave[i];// New_IIR_filter.FilterProcess(rawwave[i]);
+			buf2560[i] = New_IIR_filter.FilterProcess(rawwave[i]);
 		for (int k = Current_sample_indx -32;k < Current_sample_indx;k++)
 		{
 			Y_Array_Display[k] = buf2560[k];
@@ -2022,12 +2021,12 @@ bool EEGWave::GetRawDataFromUSB(bool isRecoding)//RUNNING IN THREAD
 	{
 	//	if( !IsLockedUSBGetting)
 		{
-			if(Current_sample_indx <= 2048)
+			if (Current_sample_indx <= 2048)
 			{
 				IsLockedUSBGetting = true;
-				if(Current_sample_indx == 2048)
+				if (Current_sample_indx == 2048)
 				{
-					for (int i = 1536,k = 0;i < 2048;k++,i++)
+					for (int i = 1536, k = 0; i < 2048; k++, i++)
 					{
 						Buf_2sec[k] = Y_Array_Display[i];
 					}
@@ -2035,95 +2034,53 @@ bool EEGWave::GetRawDataFromUSB(bool isRecoding)//RUNNING IN THREAD
 				}
 
 
-				int csi = Current_sample_indx + BUF_SIZE;//스레드 밖에도 indx공유하고있기때문.머저 ...다음...
-				
-				
-					Y_Array_Display[Current_sample_indx] = serialPort.GetChannel1Data();
-					qDebug() << "EEGWave : " << Y_Array_Display[Current_sample_indx];
-				
+				int csi = Current_sample_indx + 1;//스레드 밖에도 indx공유하고있기때문.머저 ...다음...
 
-				//if(!serialPort.GetChannel1Data())
-				//{
-				//	//AfxMessageBox(L"EEGWAVE ReadFromComm_NeuroFlex_2 ERROR", MB_OK);
-				//	return false;
-				//}
-				//serialPort.ReadFromComm_NeuroFlex_2(Y_Array_Display,BUF_SIZE,csi);
-				Current_sample_indx += BUF_SIZE;
 
-				//for (int i = Current_sample_indx - BUF_SIZE;i < Current_sample_indx;i++)
-				//	Y_Array_Display[i] = Y_Array_SM_WAVE[i];
+				//Y_Array_Display[Current_sample_indx] = serialPort.GetChannel1Data();
+				qDebug() << "EEGWave : " << Y_Array_Display[Current_sample_indx];
 
-				if(Buf_2sec[510] == 0 && Buf_2sec[511] == 0)
+				Current_sample_indx += 1;
+
+				if (Buf_2sec[510] == 0 && Buf_2sec[511] == 0)
 				{
-					for (int i = Current_sample_indx - BUF_SIZE;i < Current_sample_indx;i++)
+					for (int i = Current_sample_indx - BUF_SIZE; i < Current_sample_indx; i++)
 						Buf_2sec[i] = Y_Array_Display[i];
 				}
-				/*else
-				{
-					double Buf_2sec_[544];
-					for(int i = 0;i < 512-32; i++)
-						Buf_2sec_[i] = Buf_2sec[32 + i];
-					for(int i = 0;i < 32; i++)
-						Buf_2sec_[512 - 32 + i] = Y_Array_Display[Current_sample_indx - 32 + i];
-					for(int i = 0;i < 512; i++)
-						Buf_2sec[i] = Buf_2sec_[i];
-				}*/
 
-				
 				int kk = 0;
-				for (int i = Current_sample_indx - BUF_SIZE;i < Current_sample_indx;i++,kk++)
+
+				//just for raw data
+				bool isover = false;
+				//Y_Array_Display[i] *= 1.8;
+				if (abs(Y_Array_Display[Current_sample_indx]) > 0.5*ThreshValue)
 				{
-					//just for raw data
-					bool isover = false;
-					//Y_Array_Display[i] *= 1.8;
-					if (abs(Y_Array_Display[i]) > 0.5*ThreshValue)
-					{
-						IsOverFlowed[i] = true;
-						isover = true;
-					}
-				/*	if (abs(Y_Array_Display_2[i]) > 0.5*ThreshValue)// proccess later
-					{
-						IsOverFlowed[i] = true;
-						isover = true;
-					}*/
-					//Y_Array_Display[i] = Y_Array_SM_WAVE[i];
-					/*if((Current_sample_indx/32)%2==0)
-							Y_Array_Display[i] = 20.0*sin(PI*kk/BUF_SIZE);
-						else
-							Y_Array_Display[i] = -20.0*sin(PI*kk/BUF_SIZE);*/
-					if(isRecoding)
-					{
-						/*if((Current_sample_indx/32)%2==0)
-							Y_Array_Display[i] = 20.0*sin(PI*kk/BUF_SIZE);
-						else
-							Y_Array_Display[i] = -20.0*sin(PI*kk/BUF_SIZE);*/
-
-						//int r_size = Recoded_Array.size();
-						//if((r_size/2048)%2 == 0)
-							//Y_Array_Display[i] = Y_Array_SM_WAVE[i];
-						//else
-						//	Y_Array_Display[i] = Y_Array_SM_WAVE_[i];
-
-						Total_amp += abs(Y_Array_Display[i]);
-						Recoded_Array.push_back(Y_Array_Display[i]);
-
-						if(isover)
-						{
-							CountofOverSample++;
-						}
-						Recoded_Array_IsOver.push_back(IsOverFlowed[i]);
-					}
+					IsOverFlowed[Current_sample_indx] = true;
+					isover = true;
 				}
-				double recode_size = Recoded_Array.size();
-				if( recode_size != 0)
+				if (isRecoding)
 				{
-					Avg_amp = Total_amp/recode_size;
+
+					Total_amp += abs(Y_Array_Display[Current_sample_indx]);
+					Recoded_Array.push_back(Y_Array_Display[Current_sample_indx]);
+
+					if (isover)
+					{
+						CountofOverSample++;
+					}
+					Recoded_Array_IsOver.push_back(IsOverFlowed[Current_sample_indx]);
+				}
+
+				double recode_size = Recoded_Array.size();
+				if (recode_size != 0)
+				{
+					Avg_amp = Total_amp / recode_size;
 					//Avg_amp /= 0.707;
 					//Avg_amp *= 1.414;
 					//Avg_amp *= 1.623;
 					Avg_amp *= 1.5748;
 					Avg_amp *= 2.0;
-					OverVpercent = (double)CountofOverSample/recode_size;
+					OverVpercent = (double)CountofOverSample / recode_size;
 				}
 
 				IsLockedUSBGetting = false;
@@ -2157,8 +2114,7 @@ bool EEGWave::GetRawDataFromUSB_2(bool isRecoding)//RUNNING IN THREAD
 
 				for (int i = csi - BUF_SIZE; i < csi; i++)
 				{
-					Y_Array_Display[i] = serialPort.GetChannel1Data();
-					Y_Array_Display_2[i] = serialPort.GetChannel2Data();
+
 				}
 
 				//if(!serialPort.ReadFromNeuronFlex2(Y_Array_Display,Y_Array_Display_2,BUF_SIZE,csi))
@@ -2239,9 +2195,7 @@ void EEGWave::CloseUsbComm()
 }
 void EEGWave::start()
 {
-	serialPort.SetBoolPause(false);
-	serialPort.SetBoolStop(false);
-	serialPort.start();
+	serialPort.Start();
 }
 
 void EEGWave::pause()
@@ -2256,7 +2210,7 @@ void EEGWave::resume()
 
 void EEGWave::stop()
 {
-	serialPort.Stop(); 
+	serialPort.Stop();
 }
 
 
@@ -2472,12 +2426,8 @@ void EEGWave::ReProcess8secData()
 //			}
 //		}
 //	}
-	
 //#pragma endregion NEW_METHOD_OF_PROCESS_WAVE_OVERFLOW_from_0_to_currentindx
-
-	//
 //#pragma region NEW_METHOD_OF_PROCESS_WAVE_OVERFLOW_RecodeArry
-
 	//int sss = CountOfRecodeSamples - 2048;
 	//int eee = CountOfRecodeSamples - 2048 + abs(Current_sample_indx - 2048);
 	//if(sss >= 64)
@@ -2504,7 +2454,6 @@ void EEGWave::ReProcess8secData()
 	//				plusflag = true;
 	//				minusflag = false;
 	//				pluscount++;
-
 	//			}
 	//			else
 	//			{
@@ -2543,10 +2492,7 @@ void EEGWave::ReProcess8secData()
 	//		}
 	//	}
 	//}
-	
 //#pragma endregion NEW_METHOD_OF_PROCESS_WAVE_OVERFLOW_RecodeArry
-
-	
 	//if(CountOfRecodeSamples >= 2048)
 	//	AMPThresholdIsOverfByPeakMethod(end_hz,2048);
 	int ctt_=0;
