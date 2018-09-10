@@ -1,0 +1,116 @@
+\hypertarget{moc__nntc_8cpp}{}\section{N\+N\+T\+C/\+Generated\+Files/\+Debug/moc\+\_\+nntc.cpp 파일 참조}
+\label{moc__nntc_8cpp}\index{N\+N\+T\+C/\+Generated\+Files/\+Debug/moc\+\_\+nntc.\+cpp@{N\+N\+T\+C/\+Generated\+Files/\+Debug/moc\+\_\+nntc.\+cpp}}
+{\ttfamily \#include \char`\"{}../../nntc.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$Qt\+Core/qbytearray.\+h$>$}\newline
+{\ttfamily \#include $<$Qt\+Core/qmetatype.\+h$>$}\newline
+moc\+\_\+nntc.\+cpp에 대한 include 의존 그래프
+% FIG 0
+\subsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structqt__meta__stringdata___n_n_t_c__t}{qt\+\_\+meta\+\_\+stringdata\+\_\+\+N\+N\+T\+C\+\_\+t}}
+\end{DoxyCompactItemize}
+\subsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{moc__nntc_8cpp_a75bb9482d242cde0a06c9dbdc6b83abe}{Q\+T\+\_\+\+M\+O\+C\+\_\+\+L\+I\+T\+E\+R\+AL}}(idx,  ofs,  len)
+\end{DoxyCompactItemize}
+\subsection*{변수}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{structqt__meta__stringdata___n_n_t_c__t}{qt\+\_\+meta\+\_\+stringdata\+\_\+\+N\+N\+T\+C\+\_\+t}} \mbox{\hyperlink{moc__nntc_8cpp_ad21af78e85271e8bec6243cafa123e94}{qt\+\_\+meta\+\_\+stringdata\+\_\+\+N\+N\+TC}}
+\item 
+static const uint \mbox{\hyperlink{moc__nntc_8cpp_a14af4697bb92344e868a85dba7593e8e}{qt\+\_\+meta\+\_\+data\+\_\+\+N\+N\+TC}} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{매크로 문서화}
+\mbox{\Hypertarget{moc__nntc_8cpp_a75bb9482d242cde0a06c9dbdc6b83abe}\label{moc__nntc_8cpp_a75bb9482d242cde0a06c9dbdc6b83abe}} 
+\index{moc\+\_\+nntc.\+cpp@{moc\+\_\+nntc.\+cpp}!Q\+T\+\_\+\+M\+O\+C\+\_\+\+L\+I\+T\+E\+R\+AL@{Q\+T\+\_\+\+M\+O\+C\+\_\+\+L\+I\+T\+E\+R\+AL}}
+\index{Q\+T\+\_\+\+M\+O\+C\+\_\+\+L\+I\+T\+E\+R\+AL@{Q\+T\+\_\+\+M\+O\+C\+\_\+\+L\+I\+T\+E\+R\+AL}!moc\+\_\+nntc.\+cpp@{moc\+\_\+nntc.\+cpp}}
+\subsubsection{\texorpdfstring{Q\+T\+\_\+\+M\+O\+C\+\_\+\+L\+I\+T\+E\+R\+AL}{QT\_MOC\_LITERAL}}
+{\footnotesize\ttfamily \#define Q\+T\+\_\+\+M\+O\+C\+\_\+\+L\+I\+T\+E\+R\+AL(\begin{DoxyParamCaption}\item[{}]{idx,  }\item[{}]{ofs,  }\item[{}]{len }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}
+Q\_STATIC\_BYTE\_ARRAY\_DATA\_HEADER\_INITIALIZER\_WITH\_OFFSET(len, \(\backslash\)
+    qptrdiff(offsetof(\mbox{\hyperlink{structqt__meta__stringdata___n_n_t_c__t}{qt\_meta\_stringdata\_NNTC\_t}}, stringdata0) + ofs \(\backslash\)
+        - idx * \textcolor{keyword}{sizeof}(QByteArrayData)) \(\backslash\)
+    )
+\end{DoxyCode}
+
+
+moc\+\_\+nntc.\+cpp 파일의 27 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{변수 문서화}
+\mbox{\Hypertarget{moc__nntc_8cpp_a14af4697bb92344e868a85dba7593e8e}\label{moc__nntc_8cpp_a14af4697bb92344e868a85dba7593e8e}} 
+\index{moc\+\_\+nntc.\+cpp@{moc\+\_\+nntc.\+cpp}!qt\+\_\+meta\+\_\+data\+\_\+\+N\+N\+TC@{qt\+\_\+meta\+\_\+data\+\_\+\+N\+N\+TC}}
+\index{qt\+\_\+meta\+\_\+data\+\_\+\+N\+N\+TC@{qt\+\_\+meta\+\_\+data\+\_\+\+N\+N\+TC}!moc\+\_\+nntc.\+cpp@{moc\+\_\+nntc.\+cpp}}
+\subsubsection{\texorpdfstring{qt\+\_\+meta\+\_\+data\+\_\+\+N\+N\+TC}{qt\_meta\_data\_NNTC}}
+{\footnotesize\ttfamily const uint qt\+\_\+meta\+\_\+data\+\_\+\+N\+N\+TC\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries 초기값\+:}
+\begin{DoxyCode}
+= \{
+
+ 
+       7,       
+       0,       
+       0,    0, 
+       5,   14, 
+       0,    0, 
+       0,    0, 
+       0,    0, 
+       0,       
+       0,       
+
+ 
+       1,    0,   39,    2, 0x0a ,
+       3,    0,   40,    2, 0x0a ,
+       4,    0,   41,    2, 0x0a ,
+       5,    0,   42,    2, 0x0a ,
+       6,    0,   43,    2, 0x0a ,
+
+ 
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+
+       0        
+\}
+\end{DoxyCode}
+
+
+moc\+\_\+nntc.\+cpp 파일의 48 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{moc__nntc_8cpp_ad21af78e85271e8bec6243cafa123e94}\label{moc__nntc_8cpp_ad21af78e85271e8bec6243cafa123e94}} 
+\index{moc\+\_\+nntc.\+cpp@{moc\+\_\+nntc.\+cpp}!qt\+\_\+meta\+\_\+stringdata\+\_\+\+N\+N\+TC@{qt\+\_\+meta\+\_\+stringdata\+\_\+\+N\+N\+TC}}
+\index{qt\+\_\+meta\+\_\+stringdata\+\_\+\+N\+N\+TC@{qt\+\_\+meta\+\_\+stringdata\+\_\+\+N\+N\+TC}!moc\+\_\+nntc.\+cpp@{moc\+\_\+nntc.\+cpp}}
+\subsubsection{\texorpdfstring{qt\+\_\+meta\+\_\+stringdata\+\_\+\+N\+N\+TC}{qt\_meta\_stringdata\_NNTC}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structqt__meta__stringdata___n_n_t_c__t}{qt\+\_\+meta\+\_\+stringdata\+\_\+\+N\+N\+T\+C\+\_\+t}} qt\+\_\+meta\+\_\+stringdata\+\_\+\+N\+N\+TC\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries 초기값\+:}
+\begin{DoxyCode}
+= \{
+    \{
+\mbox{\hyperlink{moc__nntc_8cpp_a75bb9482d242cde0a06c9dbdc6b83abe}{QT\_MOC\_LITERAL}}(0, 0, 4), 
+\mbox{\hyperlink{moc__nntc_8cpp_a75bb9482d242cde0a06c9dbdc6b83abe}{QT\_MOC\_LITERAL}}(1, 5, 14), 
+\mbox{\hyperlink{moc__nntc_8cpp_a75bb9482d242cde0a06c9dbdc6b83abe}{QT\_MOC\_LITERAL}}(2, 20, 0), 
+\mbox{\hyperlink{moc__nntc_8cpp_a75bb9482d242cde0a06c9dbdc6b83abe}{QT\_MOC\_LITERAL}}(3, 21, 13), 
+\mbox{\hyperlink{moc__nntc_8cpp_a75bb9482d242cde0a06c9dbdc6b83abe}{QT\_MOC\_LITERAL}}(4, 35, 14), 
+\mbox{\hyperlink{moc__nntc_8cpp_a75bb9482d242cde0a06c9dbdc6b83abe}{QT\_MOC\_LITERAL}}(5, 50, 9), 
+\mbox{\hyperlink{moc__nntc_8cpp_a75bb9482d242cde0a06c9dbdc6b83abe}{QT\_MOC\_LITERAL}}(6, 60, 15) 
+
+    \},
+    \textcolor{stringliteral}{"NNTC\(\backslash\)0serial\_connect\(\backslash\)0\(\backslash\)0serial\_rescan\(\backslash\)0"}
+    \textcolor{stringliteral}{"widget\_changed\(\backslash\)0send\_test\(\backslash\)0serial\_received"}
+\}
+\end{DoxyCode}
+
+
+moc\+\_\+nntc.\+cpp 파일의 32 번째 라인에서 정의되었습니다.
+

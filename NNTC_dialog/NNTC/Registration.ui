@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Registration</class>
+ <widget class="QDialog" name="Registration">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::NoContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string/>
+  </property>
+  <widget class="QTableView" name="TableUserInfo">
+   <property name="geometry">
+    <rect>
+     <x>155</x>
+     <y>285</y>
+     <width>766</width>
+     <height>490</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::NoContextMenu</enum>
+   </property>
+  </widget>
+  <widget class="QTableView" name="TableTrainInfo">
+   <property name="geometry">
+    <rect>
+     <x>978</x>
+     <y>285</y>
+     <width>766</width>
+     <height>490</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::NoContextMenu</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1920</width>
+     <height>1080</height>
+    </rect>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::NoContextMenu</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/NNTC/Resources/page2/21.jpg);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ButtonUserNew">
+   <property name="geometry">
+    <rect>
+     <x>155</x>
+     <y>787</y>
+     <width>123</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::NoContextMenu</enum>
+   </property>
+   <property name="text">
+    <string>NewUser</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ButtonUserModify">
+   <property name="geometry">
+    <rect>
+     <x>288</x>
+     <y>787</y>
+     <width>123</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::NoContextMenu</enum>
+   </property>
+   <property name="text">
+    <string>UserModify</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ButtonUserDel">
+   <property name="geometry">
+    <rect>
+     <x>421</x>
+     <y>787</y>
+     <width>123</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::NoContextMenu</enum>
+   </property>
+   <property name="text">
+    <string>UserDel</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit">
+   <property name="geometry">
+    <rect>
+     <x>554</x>
+     <y>787</y>
+     <width>233</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::NoContextMenu</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ButtonUserSearch">
+   <property name="geometry">
+    <rect>
+     <x>797</x>
+     <y>787</y>
+     <width>123</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::NoContextMenu</enum>
+   </property>
+   <property name="text">
+    <string>UserSearch</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ButtonTrainDel">
+   <property name="geometry">
+    <rect>
+     <x>1245</x>
+     <y>787</y>
+     <width>123</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::NoContextMenu</enum>
+   </property>
+   <property name="text">
+    <string>TrainDel</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ButtonTrainReport">
+   <property name="geometry">
+    <rect>
+     <x>1112</x>
+     <y>787</y>
+     <width>123</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::NoContextMenu</enum>
+   </property>
+   <property name="text">
+    <string>TrainReport</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ButtonTLC">
+   <property name="geometry">
+    <rect>
+     <x>1378</x>
+     <y>787</y>
+     <width>123</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::NoContextMenu</enum>
+   </property>
+   <property name="text">
+    <string>TLC</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ButtonTrainNew">
+   <property name="geometry">
+    <rect>
+     <x>979</x>
+     <y>787</y>
+     <width>123</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::NoContextMenu</enum>
+   </property>
+   <property name="text">
+    <string>NewTrain</string>
+   </property>
+  </widget>
+  <zorder>label</zorder>
+  <zorder>TableUserInfo</zorder>
+  <zorder>TableTrainInfo</zorder>
+  <zorder>ButtonUserNew</zorder>
+  <zorder>ButtonUserModify</zorder>
+  <zorder>ButtonUserDel</zorder>
+  <zorder>textEdit</zorder>
+  <zorder>ButtonUserSearch</zorder>
+  <zorder>ButtonTrainDel</zorder>
+  <zorder>ButtonTrainReport</zorder>
+  <zorder>ButtonTLC</zorder>
+  <zorder>ButtonTrainNew</zorder>
+ </widget>
+ <resources>
+  <include location="nntc.qrc"/>
+ </resources>
+ <connections/>
+</ui>

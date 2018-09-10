@@ -1,0 +1,17 @@
+<RCC>
+  <qresource prefix="/NNTC">
+    <file>Resources/page2/21.jpg</file>
+    <file>Resources/page5/52.jpg</file>
+    <file>Resources/page5/MANUAL.png</file>
+    <file>Resources/page5/게임.png</file>
+    <file>Resources/page5/닫기.png</file>
+    <file>Resources/page5/레코드.png</file>
+    <file>Resources/page5/리셋.png</file>
+    <file>Resources/page5/오토.png</file>
+    <file>Resources/page5/옵션.png</file>
+    <file>Resources/page5/일시정지.png</file>
+    <file>Resources/page5/정지.png</file>
+    <file>Resources/page5/51.jpg</file>
+    <file>Resources/page5/play.png</file>
+  </qresource>
+</RCC>

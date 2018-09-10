@@ -1,0 +1,232 @@
+\hypertarget{class_n_n_t_c}{}\section{N\+N\+TC 클래스 참조}
+\label{class_n_n_t_c}\index{N\+N\+TC@{N\+N\+TC}}
+
+
+{\ttfamily \#include $<$nntc.\+h$>$}
+
+
+
+N\+N\+T\+C에 대한 상속 다이어그램 \+: 
+% FIG 0
+
+
+N\+N\+T\+C에 대한 협력 다이어그램\+:
+% FIG 1
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_n_n_t_c_ae9613ae3c1668e30610e0104e8e53d40}{serial\+\_\+connect}} ()
+\item 
+void \mbox{\hyperlink{class_n_n_t_c_a5c1cdbe97b81d19b31ff07e9ca413be2}{serial\+\_\+rescan}} ()
+\item 
+void \mbox{\hyperlink{class_n_n_t_c_ac33ec4d5e113accf260bc4b4d9f77338}{widget\+\_\+changed}} ()
+\item 
+void \mbox{\hyperlink{class_n_n_t_c_a7734a6d097beaf07c27e46af0987d59a}{send\+\_\+test}} ()
+\item 
+void \mbox{\hyperlink{class_n_n_t_c_a2064774e2931ebb77e62bbd5115c0589}{serial\+\_\+received}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_n_n_t_c_a6b610d14cbd1da9f70d6aafb8f8f630a}{N\+N\+TC}} (Q\+Widget $\ast$parent=0)
+\item 
+\mbox{\hyperlink{class_n_n_t_c_a36e06f71df0bfcbeb932f34c5986801a}{$\sim$\+N\+N\+TC}} ()
+\end{DoxyCompactItemize}
+\subsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ui_1_1_n_n_t_c_class}{Ui\+::\+N\+N\+T\+C\+Class}} \mbox{\hyperlink{class_n_n_t_c_aafbe297818dd00b2c0f791ebb06292a4}{ui}}
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+
+
+nntc.\+h 파일의 9 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_n_n_t_c_a6b610d14cbd1da9f70d6aafb8f8f630a}\label{class_n_n_t_c_a6b610d14cbd1da9f70d6aafb8f8f630a}} 
+\index{N\+N\+TC@{N\+N\+TC}!N\+N\+TC@{N\+N\+TC}}
+\index{N\+N\+TC@{N\+N\+TC}!N\+N\+TC@{N\+N\+TC}}
+\subsubsection{\texorpdfstring{N\+N\+T\+C()}{NNTC()}}
+{\footnotesize\ttfamily N\+N\+T\+C\+::\+N\+N\+TC (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+nntc.\+cpp 파일의 7 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+8     : QDialog(parent, Qt::FramelessWindowHint)
+9 \{
+10     \mbox{\hyperlink{class_n_n_t_c_aafbe297818dd00b2c0f791ebb06292a4}{ui}}.\mbox{\hyperlink{class_ui___n_n_t_c_class_af15085afc5bdbefb529321782b509792}{setupUi}}(\textcolor{keyword}{this});
+11     \mbox{\hyperlink{nntc_8cpp_ae6fc1d9226a3b8046c907909a550dbe7}{serial}} = \textcolor{keyword}{new} QSerialPort(\textcolor{keyword}{this});
+12     connect(\mbox{\hyperlink{class_n_n_t_c_aafbe297818dd00b2c0f791ebb06292a4}{ui}}.\mbox{\hyperlink{class_ui___n_n_t_c_class_a6e604f467f5d7264f8d23f0cf54a6fdf}{playButton}}, SIGNAL(clicked()), \textcolor{keyword}{this}, SLOT(
+      \mbox{\hyperlink{class_n_n_t_c_ae9613ae3c1668e30610e0104e8e53d40}{serial\_connect}}()));
+13     connect(\mbox{\hyperlink{class_n_n_t_c_aafbe297818dd00b2c0f791ebb06292a4}{ui}}.\mbox{\hyperlink{class_ui___n_n_t_c_class_a748e190a62458531e66a574cc556e32d}{stopButton}}, SIGNAL(clicked()), \textcolor{keyword}{this}, SLOT(
+      \mbox{\hyperlink{class_n_n_t_c_a5c1cdbe97b81d19b31ff07e9ca413be2}{serial\_rescan}}()));
+14     connect(\mbox{\hyperlink{nntc_8cpp_ae6fc1d9226a3b8046c907909a550dbe7}{serial}}, SIGNAL(readyRead()), \textcolor{keyword}{this}, SLOT(\mbox{\hyperlink{class_n_n_t_c_a2064774e2931ebb77e62bbd5115c0589}{serial\_received}}()));
+15     \mbox{\hyperlink{class_n_n_t_c_a5c1cdbe97b81d19b31ff07e9ca413be2}{serial\_rescan}}();
+16 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 2
+\mbox{\Hypertarget{class_n_n_t_c_a36e06f71df0bfcbeb932f34c5986801a}\label{class_n_n_t_c_a36e06f71df0bfcbeb932f34c5986801a}} 
+\index{N\+N\+TC@{N\+N\+TC}!````~N\+N\+TC@{$\sim$\+N\+N\+TC}}
+\index{````~N\+N\+TC@{$\sim$\+N\+N\+TC}!N\+N\+TC@{N\+N\+TC}}
+\subsubsection{\texorpdfstring{$\sim$\+N\+N\+T\+C()}{~NNTC()}}
+{\footnotesize\ttfamily N\+N\+T\+C\+::$\sim$\+N\+N\+TC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+nntc.\+cpp 파일의 18 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+19 \{
+20     \textcolor{keyword}{delete} &\mbox{\hyperlink{class_n_n_t_c_aafbe297818dd00b2c0f791ebb06292a4}{ui}};
+21     \mbox{\hyperlink{nntc_8cpp_ae6fc1d9226a3b8046c907909a550dbe7}{serial}}->close();
+22 \}
+\end{DoxyCode}
+
+
+\subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_n_n_t_c_a7734a6d097beaf07c27e46af0987d59a}\label{class_n_n_t_c_a7734a6d097beaf07c27e46af0987d59a}} 
+\index{N\+N\+TC@{N\+N\+TC}!send\+\_\+test@{send\+\_\+test}}
+\index{send\+\_\+test@{send\+\_\+test}!N\+N\+TC@{N\+N\+TC}}
+\subsubsection{\texorpdfstring{send\+\_\+test}{send\_test}}
+{\footnotesize\ttfamily void N\+N\+T\+C\+::send\+\_\+test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+nntc.\+cpp 파일의 66 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+67 \{
+68     \mbox{\hyperlink{nntc_8cpp_ae6fc1d9226a3b8046c907909a550dbe7}{serial}}->write(\textcolor{stringliteral}{"test\(\backslash\)n"});
+69 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_n_n_t_c_ae9613ae3c1668e30610e0104e8e53d40}\label{class_n_n_t_c_ae9613ae3c1668e30610e0104e8e53d40}} 
+\index{N\+N\+TC@{N\+N\+TC}!serial\+\_\+connect@{serial\+\_\+connect}}
+\index{serial\+\_\+connect@{serial\+\_\+connect}!N\+N\+TC@{N\+N\+TC}}
+\subsubsection{\texorpdfstring{serial\+\_\+connect}{serial\_connect}}
+{\footnotesize\ttfamily void N\+N\+T\+C\+::serial\+\_\+connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+nntc.\+cpp 파일의 23 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+24 \{
+25     \textcolor{keywordflow}{foreach}(\textcolor{keyword}{const} QSerialPortInfo &serialPortInfo, QSerialPortInfo::availablePorts())
+26     \{
+27         QString tmp = serialPortInfo.description();
+28         QString name = serialPortInfo.portName();
+29         \mbox{\hyperlink{nntc_8cpp_ae6fc1d9226a3b8046c907909a550dbe7}{serial}}->setPortName(name);
+30         qDebug() << serialPortInfo.serialNumber();
+31         qDebug() << \textcolor{stringliteral}{"Location:"} << serialPortInfo.systemLocation();
+32         qDebug() << \textcolor{stringliteral}{"Description:"} << serialPortInfo.description();
+33         qDebug() << \textcolor{stringliteral}{"Manufacturer:"} << serialPortInfo.manufacturer();
+34 
+35         qDebug() << \textcolor{stringliteral}{"Vendor Identifier:"} << (
+36             serialPortInfo.hasVendorIdentifier() ?
+37             QByteArray::number(serialPortInfo.vendorIdentifier(), 16) :
+38             QByteArray());
+39 
+40         qDebug() << \textcolor{stringliteral}{"Product Identifier:"} << (
+41             serialPortInfo.hasProductIdentifier() ?
+42             QByteArray::number(serialPortInfo.productIdentifier(), 16) :
+43             QByteArray());
+44 
+45 
+46         qDebug() << \textcolor{stringliteral}{"Busy:"} << (serialPortInfo.isBusy() ? QObject::tr(\textcolor{stringliteral}{"Yes"}) : QObject::tr(\textcolor{stringliteral}{"No"}));
+47     \}
+48     \mbox{\hyperlink{nntc_8cpp_ae6fc1d9226a3b8046c907909a550dbe7}{serial}}->setBaudRate(QSerialPort::Baud115200);
+49     \mbox{\hyperlink{nntc_8cpp_ae6fc1d9226a3b8046c907909a550dbe7}{serial}}->setDataBits(QSerialPort::Data8);
+50     \mbox{\hyperlink{nntc_8cpp_ae6fc1d9226a3b8046c907909a550dbe7}{serial}}->setParity(QSerialPort::NoParity);
+51     \mbox{\hyperlink{nntc_8cpp_ae6fc1d9226a3b8046c907909a550dbe7}{serial}}->setStopBits(QSerialPort::OneStop);
+52     \mbox{\hyperlink{nntc_8cpp_ae6fc1d9226a3b8046c907909a550dbe7}{serial}}->setFlowControl(QSerialPort::NoFlowControl);
+53     \mbox{\hyperlink{nntc_8cpp_ae6fc1d9226a3b8046c907909a550dbe7}{serial}}->open(QIODevice::ReadOnly);
+54 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 3
+\mbox{\Hypertarget{class_n_n_t_c_a2064774e2931ebb77e62bbd5115c0589}\label{class_n_n_t_c_a2064774e2931ebb77e62bbd5115c0589}} 
+\index{N\+N\+TC@{N\+N\+TC}!serial\+\_\+received@{serial\+\_\+received}}
+\index{serial\+\_\+received@{serial\+\_\+received}!N\+N\+TC@{N\+N\+TC}}
+\subsubsection{\texorpdfstring{serial\+\_\+received}{serial\_received}}
+{\footnotesize\ttfamily void N\+N\+T\+C\+::serial\+\_\+received (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+nntc.\+cpp 파일의 71 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+72 \{
+73     \textcolor{comment}{//this is called when readyRead() is emitted}
+74     qDebug() << \textcolor{stringliteral}{"New data available: "} << \mbox{\hyperlink{nntc_8cpp_ae6fc1d9226a3b8046c907909a550dbe7}{serial}}->bytesAvailable();
+75     QByteArray datas = \mbox{\hyperlink{nntc_8cpp_ae6fc1d9226a3b8046c907909a550dbe7}{serial}}->readAll();
+76     qDebug() << datas;
+77 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 4
+\mbox{\Hypertarget{class_n_n_t_c_a5c1cdbe97b81d19b31ff07e9ca413be2}\label{class_n_n_t_c_a5c1cdbe97b81d19b31ff07e9ca413be2}} 
+\index{N\+N\+TC@{N\+N\+TC}!serial\+\_\+rescan@{serial\+\_\+rescan}}
+\index{serial\+\_\+rescan@{serial\+\_\+rescan}!N\+N\+TC@{N\+N\+TC}}
+\subsubsection{\texorpdfstring{serial\+\_\+rescan}{serial\_rescan}}
+{\footnotesize\ttfamily void N\+N\+T\+C\+::serial\+\_\+rescan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+nntc.\+cpp 파일의 55 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+56 \{
+57     \mbox{\hyperlink{nntc_8cpp_ae6fc1d9226a3b8046c907909a550dbe7}{serial}}->close();
+58 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+% FIG 5
+\mbox{\Hypertarget{class_n_n_t_c_ac33ec4d5e113accf260bc4b4d9f77338}\label{class_n_n_t_c_ac33ec4d5e113accf260bc4b4d9f77338}} 
+\index{N\+N\+TC@{N\+N\+TC}!widget\+\_\+changed@{widget\+\_\+changed}}
+\index{widget\+\_\+changed@{widget\+\_\+changed}!N\+N\+TC@{N\+N\+TC}}
+\subsubsection{\texorpdfstring{widget\+\_\+changed}{widget\_changed}}
+{\footnotesize\ttfamily void N\+N\+T\+C\+::widget\+\_\+changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+nntc.\+cpp 파일의 60 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+61 \{
+62     QString buffer;
+63 
+64 \}
+\end{DoxyCode}
+
+
+\subsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_n_n_t_c_aafbe297818dd00b2c0f791ebb06292a4}\label{class_n_n_t_c_aafbe297818dd00b2c0f791ebb06292a4}} 
+\index{N\+N\+TC@{N\+N\+TC}!ui@{ui}}
+\index{ui@{ui}!N\+N\+TC@{N\+N\+TC}}
+\subsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ui_1_1_n_n_t_c_class}{Ui\+::\+N\+N\+T\+C\+Class}} N\+N\+T\+C\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+nntc.\+h 파일의 26 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+N\+N\+T\+C/\mbox{\hyperlink{nntc_8h}{nntc.\+h}}\item 
+N\+N\+T\+C/\mbox{\hyperlink{nntc_8cpp}{nntc.\+cpp}}\end{DoxyCompactItemize}

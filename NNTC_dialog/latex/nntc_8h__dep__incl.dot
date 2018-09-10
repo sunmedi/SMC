@@ -1,0 +1,12 @@
+digraph "NNTC/nntc.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node9 [label="NNTC/nntc.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="NNTC/GeneratedFiles\l/Debug/moc_nntc.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$moc__nntc_8cpp.html"];
+  Node9 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="NNTC/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html"];
+  Node9 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="NNTC/nntc.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$nntc_8cpp.html"];
+}
